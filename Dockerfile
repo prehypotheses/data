@@ -26,8 +26,9 @@ RUN groupadd --system automata --gid $GID && \
     unzip /tmp/awscliv2.zip -d /tmp/ && cd /tmp && sudo ./aws/install && cd ~ && \
     pip install --upgrade pip && \
     pip install --requirement /app/requirements.txt --no-cache-dir && \
-    mkdir /app/warehouse && mkdir /app/data && \
-    chown -R automaton:automata /app/warehouse && chown -R automaton:automata /app/data
+    mkdir /app/warehouse && mkdir /app/data && mkdir -p /home/automaton && \
+    chown -R automaton:automata /app/warehouse && chown -R automaton:automata /app/data && \
+    chown -R automaton:automata /home/automaton
 
 
 # Specific COPY
