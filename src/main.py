@@ -43,7 +43,6 @@ if __name__ == '__main__':
     import src.elements.s3_parameters as s3p
     import src.functions.cache
     import src.preface.interface
-    import src.transfer.interface
 
     connector: boto3.session.Session
     s3_parameters: s3p
